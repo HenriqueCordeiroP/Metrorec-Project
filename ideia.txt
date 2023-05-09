@@ -1,0 +1,12 @@
+fluxo
+1- passageiro chega
+2- passageiro espera
+3- vagão chega
+4- vagão espera
+5- passageiro entra enquanto tiver assento
+6- se não tiver espaço, passageiro espera, vagão é liberado
+7- vagão vai embora
+funcoes
+estacao_preencher_vagao -> 3, 4, 6, 7
+estacao espera pelo vagao -> 1, 2
+estacao_embarque -> 5
