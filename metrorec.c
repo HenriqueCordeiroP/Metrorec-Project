@@ -8,6 +8,7 @@ struct estacao {
     pthread_cond_t condVagao;
     int id; 
 };
+int i = 1;
 void estacao_init(struct estacao *estacao) {
     pthread_mutex_init(&estacao->mutex, NULL);
     pthread_cond_init(&estacao->cond, NULL);
@@ -18,6 +19,7 @@ void estacao_init(struct estacao *estacao) {
 void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 thread
     pthread_mutex_lock(&estacao->mutex);
     estacao->assentosLivres = assentos;
+    printf("Vagão chegando\n");
     pthread_cond_broadcast(&estacao->cond);
     pthread_cond_wait(&estacao->condVagao, &estacao->mutex);
     printf("Vagão indo embora\n");
@@ -27,13 +29,17 @@ void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 threa
 void estacao_espera_pelo_vagao(struct estacao * estacao) {
     pthread_mutex_lock(&estacao->mutex);
     estacao->contPassageiros++;
-    printf("Passageiros: %d \n", estacao->contPassageiros);
+    // printf("Passageiros a: %d \n", estacao->contPassageiros);
     pthread_cond_wait(&estacao->cond, &estacao->mutex);
     while(estacao->contPassageiros > 0){
         if(estacao->assentosLivres > 0 && estacao->contPassageiros > 0){
             estacao->assentosLivres--;
+            // printf("Ass %d\n", estacao->assentosLivres);
             estacao->contPassageiros--;
-        } else{
+            printf("Id: %ld\n", pthread_self());
+            // printf("Embarcado: %d\n", estacao->id);
+            break;
+        } else {
                 pthread_cond_wait(&estacao->cond, &estacao->mutex);
         }
     }
@@ -42,13 +48,10 @@ void estacao_espera_pelo_vagao(struct estacao * estacao) {
 
 void estacao_embarque(struct estacao * estacao) {
     pthread_mutex_lock(&estacao->mutex);
-    printf("Embarcado: %d\n", estacao->id);
-    if(estacao->assentosLivres == 0){
+    if(estacao->assentosLivres == 0 || estacao->contPassageiros == 0){        
         pthread_cond_signal(&estacao->condVagao);
     }
     pthread_mutex_unlock(&estacao->mutex);
 }
 
-// usar array pra ocupar lugares? 
-    // melhor do que variável contadora de assentos?
-// resolver vagão indo embora ou chegando antes
+// ta dando segmentation fault as vezes
