@@ -2,10 +2,12 @@ with open("C:/Users/RODRIGO/Desktop/CESAR/VSCode C/Metrorec-Project/check/ids.tx
     linhas = ids.readlines()
 # print(linhas)
 cont = 0
+cont2 = 0
 ident = []
 for linha in linhas:
     if linha[:2] == "Id":
         ident.append(linha[3:])
+        cont2+=1
     if "chegando" in linha:
         cont+=1
     # else:
@@ -20,3 +22,4 @@ for num in ident:
 
 print(repetidos)
 print(cont)
+print(cont2)

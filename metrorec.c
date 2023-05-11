@@ -1,3 +1,4 @@
+// real oficial
 #include <pthread.h>
 
 struct estacao {
@@ -18,8 +19,13 @@ void estacao_init(struct estacao *estacao) {
     estacao->contPassageiros = 0;
 }
 
-void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 thread
+void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 thread // tratar assentos == 0
     pthread_mutex_lock(&estacao->mutex);
+    if(assentos == 0){
+        printf("Vagão indo embora\n");
+        pthread_mutex_unlock(&estacao->mutex);
+        exit(1);
+    }
     estacao->assentosLivres = assentos;
     estacao->libera = 1;
     printf("Vagão chegando\n");

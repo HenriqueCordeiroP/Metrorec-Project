@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.html": "django-html",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "stdatomic.h": "c"
     }
 }
