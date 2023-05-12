@@ -1,182 +1,19 @@
 Vagão chegando
-Id: 34360234240
-Id: 34360235008
-Id: 34360233984
-Id: 34360233216
-Id: 34360232192
+Id: 34360209392
+Id: 34360208624
+Id: 34360208112
+Id: 34360209136
+Id: 34360207600
 Vagão indo embora
-Vagão saiu da estação
 Vagão chegando
-Id: 34360206848
-Id: 34360207104
-Id: 34360207872
-Id: 34360208128
-Id: 34360208896
+Id: 34360206576
+Id: 34360207344
+Id: 34360208368
+Id: 34360206832
+Id: 34360207088
 Vagão indo embora
-Vagão saiu da estação
 Vagão chegando
-Id: 34360234752
-Id: 34360234496
-Id: 34360233728
-Id: 34360233472
-Id: 34360232704
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360209152
-Id: 34360209920
-Id: 34360210176
-Id: 34360210944
-Id: 34360206592
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360231680
-Id: 34360232448
-Id: 34360231424
-Id: 34360230656
-Id: 34360230400
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360211200
-Id: 34360211968
-Id: 34360212224
-Id: 34360212992
-Id: 34360207360
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360229376
-Id: 34360228608
-Id: 34360229632
-Id: 34360228352
-Id: 34360227328
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360207616
-Id: 34360209408
-Id: 34360209664
-Id: 34360208384
-Id: 34360211456
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360232960
-Id: 34360229120
-Id: 34360229888
-Id: 34360231936
-Id: 34360230144
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360210688
-Id: 34360213248
-Id: 34360212480
-Id: 34360214272
-Id: 34360211712
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360231168
-Id: 34360228864
-Id: 34360227840
-Id: 34360228096
-Id: 34360227072
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360215040
-Id: 34360214016
-Id: 34360216064
-Id: 34360216320
-Id: 34360215296
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360227584
-Id: 34360226560
-Id: 34360226304
-Id: 34360226816
-Id: 34360225792
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360217088
-Id: 34360218112
-Id: 34360208640
-Id: 34360210432
-Id: 34360219136
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360226048
-Id: 34360224000
-Id: 34360224768
-Id: 34360225024
-Id: 34360223744
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360219392
-Id: 34360217344
-Id: 34360218368
-Id: 34360220416
-Id: 34360220160
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360225536
-Id: 34360225280
-Id: 34360222976
-Id: 34360224512
-Id: 34360222720
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360212736
-Id: 34360213760
-Id: 34360214528
-Id: 34360214784
-Id: 34360213504
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360224256
-Id: 34360221952
-Id: 34360223488
-Id: 34360222208
-Id: 34360221696
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360215552
-Id: 34360217600
-Id: 34360216832
-Id: 34360216576
-Id: 34360217856
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360219904
-Id: 34360218880
-Id: 34360220672
-Id: 34360221440
-Id: 34360219648
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360230912
-Id: 34360218624
-Id: 34360223232
-Id: 34360221184
-Id: 34360222464
-Vagão indo embora
-Vagão saiu da estação
-Vagão chegando
-Id: 34360215808
-Id: 34360220928
-Vagão indo embora
-Vagão saiu da estação
+Id: 34360207856
+Id: 34360208880
 Estação finalizada
+Vagão indo embora
