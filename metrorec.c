@@ -19,7 +19,7 @@ void estacao_init(struct estacao *estacao) {
     estacao->contPassageiros = 0;
 }
 
-void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 thread // tratar assentos == 0
+void estacao_preecher_vagao(struct estacao * estacao, int assentos) {
     pthread_mutex_lock(&estacao->mutex);
     if(assentos == 0){
         printf("Vagão indo embora\n");
@@ -33,25 +33,19 @@ void estacao_preecher_vagao(struct estacao * estacao, int assentos) { // 1 threa
     pthread_cond_wait(&estacao->condVagao, &estacao->mutex);
     printf("Vagão indo embora\n");
     pthread_mutex_unlock(&estacao->mutex);
-    // sleep(0.5);
 }
 
 void estacao_espera_pelo_vagao(struct estacao * estacao) {
     pthread_mutex_lock(&estacao->mutex);
     estacao->contPassageiros++;
-    // printf("Passageiros a: %d \n", estacao->contPassageiros);
     pthread_cond_wait(&estacao->cond, &estacao->mutex);
     while(estacao->contPassageiros > 0){
         if(estacao->assentosLivres > 0 && estacao->contPassageiros > 0){
             estacao->assentosLivres--;
-            // printf("Ass %d\n", estacao->assentosLivres);
             estacao->contPassageiros--;
-            // printf("Passageiros: %d\n", estacao->contPassageiros);
             printf("Id: %ld\n", pthread_self());
-            // printf("Embarcado: %d\n", estacao->id);
             break;
         } else {
-                // printf("Wait\n");
                 pthread_cond_wait(&estacao->cond, &estacao->mutex);
         }
     }
@@ -65,8 +59,5 @@ void estacao_embarque(struct estacao * estacao) {
         estacao->libera = 0;
         pthread_cond_signal(&estacao->condVagao);
     }
-    // printf("Libera: %d", estacao->libera);
     pthread_mutex_unlock(&estacao->mutex);
 }
-
-// ta dando segmentation fault as vezes
