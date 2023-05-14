@@ -21,10 +21,8 @@ void estacao_preecher_vagao(struct estacao * estacao, int assentos) {
     pthread_mutex_lock(&estacao->mutex);
     estacao->assentosLivres = assentos;
     estacao->libera = 1;
-    printf("Vagão chegando\n");
     pthread_cond_broadcast(&estacao->cond);
     pthread_cond_wait(&estacao->condVagao, &estacao->mutex);
-    printf("Vagão indo embora\n");
     pthread_mutex_unlock(&estacao->mutex);
 }
 
@@ -36,7 +34,6 @@ void estacao_espera_pelo_vagao(struct estacao * estacao) {
         if(estacao->assentosLivres > 0 && estacao->contPassageiros > 0){
             estacao->assentosLivres--;
             estacao->contPassageiros--;
-            printf("Id: %ld\n", pthread_self());
             break;
         } else {
                 pthread_cond_wait(&estacao->cond, &estacao->mutex);
