@@ -26,7 +26,6 @@ void estacao_preencher_vagao(struct estacao * estacao, int assentos) {
     printf("Vagão chegou\n");
     pthread_cond_broadcast(&estacao->cond);
     pthread_cond_wait(&estacao->condVagao, &estacao->mutex);
-    printf("Vagão saiu\n");
     pthread_mutex_unlock(&estacao->mutex);
 }
 
